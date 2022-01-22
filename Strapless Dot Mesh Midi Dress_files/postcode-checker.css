@@ -1,0 +1,83 @@
+.harper-postcode-checker-wrap {
+    box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+}
+
+.harper-postcode-checker-wrap * {
+    box-sizing: border-box;
+}
+
+.harper-postcode-checker-wrap h3 {
+    font-family: 'Monument', sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.harper-postcode-checker-wrap p {
+    font-family: 'TimesNow', sans-serif;
+}
+.harper-postcode-checker-wrap button {
+    text-transform: uppercase;
+}
+.harper-postcode-checker-wrap button .try-it {
+    text-decoration: underline;
+}
+.action.primary.checkout.harper-postcode-checker-trigger {
+    background-color: #959595;
+    color: white;
+    border-color: #959595;
+}
+.harper-postcode-checker-wrap .harper-postcode-checker-trigger {
+    width: 100%;
+}
+
+.harper-postcode-checker-wrap .postcode-checker {
+    border: 1px solid #c2c2c2;
+    width: 100%;
+    padding: 0 15px 5px;
+    display: none;
+    z-index: 10;
+    position: fixed;
+    bottom: 151px;
+    left: 0;
+    background-color: #fff;
+}
+
+.harper-postcode-checker-wrap .postcode-checker.active {
+    display: block;
+}
+
+.harper-postcode-checker-wrap .postcode-checker .static-block p:last-child {
+    /*font-weight: bold;*/
+    font-size: 11px;
+}
+
+.harper-postcode-checker-wrap .postcode-checker .form-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    padding: 0 10px;
+}
+
+.harper-postcode-checker-wrap .postcode-checker .form-wrap input[type="text"] {
+    height: 47px;
+}
+
+.harper-postcode-checker-wrap .postcode-checker .form-wrap button {
+    text-transform: uppercase;
+}
+
+.harper-postcode-checker-wrap .postcode-checker .error {
+    grid-column: span 2;
+    color: #ff0000;
+}
+
+/* ONLY DESKTOP */
+@media (min-width:1025px) {
+    .harper-postcode-checker-wrap .postcode-checker {
+        bottom: 143px;
+    }
+}

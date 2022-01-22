@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Domine&family=Roboto+Mono&display=swap");
+
+/* font-family: 'Domine', serif;
+font-family: 'Roboto Mono', monospace; */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto Mono", monospace;
+  font-size: 12px;
+  color: black;
+}
+.main {
+  height: 100vh;
+  margin: 20px 0;
+  padding: 0;
+  width: 100%;
+}
+
+a{
+  cursor: pointer;
+}
+.logo {
+  position: fixed;
+  top: 100px;
+  left: 50px;
+  z-index: 1;
+}
+.logo img {
+  height: 70px;
+}
+
+.navbar {
+  width: 100vw;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  border-bottom: 1px solid black;
+}
+.left-navbar,
+.right-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+}
+
+.left-navbar a,
+.right-navbar a {
+  margin: 5px;
+  text-decoration: none;
+  color: black;
+}
+.left-navbar a:hover,
+.right-navbar a:hover {
+  text-decoration: underline;
+}
+
+/* DROPDOWN STYLING */
+.dropdown {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: absolute;
+  color: black;
+  font-size: 14px;
+  background-color: white;
+  width: 100%;
+  height: 40vh;
+  top: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+.dropdown-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 30%;
+}
+
+.dropdown-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  font-size: 8px;
+}
+
+.dropdown-img {
+  width: 70%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.navbar:hover ~ .logo {
+  visibility: hidden;
+}
+
+/* SECTION STYLING */
+section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50%;
+  margin-top: 2%;
+  margin-bottom: 0;
+}
+section h1 {
+  font-family: "Domine", serif;
+  letter-spacing: 3px;
+}
+.buttons {
+  display: flex;
+  margin: 20px 0 0;
+  align-items: flex-start;
+}
+.buttons button {
+  margin-right: 20px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+.buttons a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* SMALL DROPDOWN STYLING */
+.dropdown-small {
+  overflow: hidden;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.dropbtn-small {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.dropdown-content-small {
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  background-color: white;
+}
+.dropdown-content-small a {
+  margin: 5px 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.dropdown-small:hover .dropdown-content-small {
+  display: flex;
+  height: 30vh;
+}
+.dropdown-content-small a:hover {
+  text-decoration: underline;
+}
+
+/* PRODUCTS CARD BEGIN */
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.card {
+  height: 650px;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.product-img-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.product-image {
+  width: 100%;
+  height: 100%;
+  max-width: 672px;
+  max-height: 896px;
+}
+.product-img-container img:last-child {
+  display: none;
+}
+.product-img-container:hover img:last-child {
+  display: block;
+}
+.product-img-container:hover img:first-child {
+  display: none;
+}
+
+.product-info {
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  font-family: "Domine", serif;
+}
+.product-name,
+.product-detail {
+  margin: 2px;
+}
+
+.product-price {
+  font-size: 18px;
+}
+
+/* SEARCH CONTAINER */
+
+.search-wrap {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(236, 246, 247, 0.831);
+  z-index: 300;
+  overflow-y: hidden;
+}
+#search-big-container {
+  display: flex;
+  /* TO MAKE IT VISIBLE CHANGE DISPLAY */
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 1px solid black;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  padding: 3%;
+  z-index: 200;
+  background-color: white;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.search-right-container {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.search-right-container input {
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 10px 0;
+  font-size: 20px;
+  outline: none;
+}
+.search-links {
+  display: flex;
+}
+.search-links a {
+  margin: 20px 20px 0 0;
+  text-decoration: none;
+  color: inherit;
+}
+/* SEARCH RESULTS STYLING */
+.search-results {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin: 0;
+  overflow: scroll;
+  font-size: 9px;
+}
+.error-message {
+  text-align: center;
+  font-size: 12px;
+}
+
+.search-card {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 0;
+}
+
+.search-img-container {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.search-image {
+  height: 100%;
+  /* max-width: 672px;
+  max-height: 896px; */
+}
+.search-card-info {
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+}
+.search-card-name {
+  margin: 3px;
+}
+.search-card-price {
+  font-size: 11px;
+  margin: 0;
+}
+
+/* MOBILE VERSION*/
+@media only screen and (max-width: 750px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 8px;
+  }
+  .card {
+    height: 450px;
+  }
+  .section h1 {
+    font-family: "Domine", serif;
+    font-size: 10px;
+  }
+  section p,
+  .buttons {
+    display: none;
+  }
+  .product-price {
+    font-size: 10px;
+  }
+  .navbar {
+    display: none;
+  }
+  .logo {
+    top: 1%;
+    left: 3%;
+  }
+  .logo img {
+    height: 50px;
+  }
+  #search-big-container {
+    width: 100%;
+  }
+}

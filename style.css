@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Domine&family=Roboto+Mono&display=swap");
+
+/* font-family: 'Domine', serif;
+font-family: 'Roboto Mono', monospace; */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto Mono", monospace;
+  font-size: 12px;
+  color: black;
+}
+.main {
+  height: 100vh;
+  margin: 40px 0;
+  width: 100%;
+  background: #222a49
+    url(https://www.self-portrait-studio.com/media/wysiwyg/1_137.jpg) no-repeat
+    center center/cover;
+}
+
+.logo {
+  position: fixed;
+  top: 100px;
+  left: 50px;
+  z-index: 1;
+}
+.logo img {
+  height: 70px;
+}
+
+.navbar {
+  width: 100vw;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+.left-navbar,
+.right-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+}
+
+.left-navbar a,
+.right-navbar a {
+  margin: 5px;
+  text-decoration: none;
+  color: black;
+}
+.left-navbar a:hover,
+.right-navbar a:hover {
+  text-decoration: underline;
+}
+
+/* DROPDOWN STYLING */
+
+.dropdown {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.dropdownbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: absolute;
+  color: black;
+  font-size: 14px;
+  background-color: white;
+  width: 100%;
+  height: 40vh;
+  top: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+.dropdown-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 30%;
+}
+
+.dropdown-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  font-size: 8px;
+}
+
+.dropdown-img {
+  width: 70%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.navbar:hover ~ .logo {
+  visibility: hidden;
+}
+
+/* 840px and below */
